@@ -17,8 +17,8 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
           
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
+      # The setup-android step has been removed. 
+      # Ubuntu-22.04 already has the Android SDK ready to go.
         
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
