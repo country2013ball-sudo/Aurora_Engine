@@ -17,9 +17,6 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
           
-      # The setup-android step has been removed. 
-      # Ubuntu-22.04 already has the Android SDK ready to go.
-        
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
@@ -39,7 +36,7 @@ jobs:
           
       - name: Build APK with Flet
         run: |
-          flet build apk --project-name "framestudio" --org "com.example.framestudio"
+          flet build apk --project "framestudio" --org "com.example.framestudio"
           
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
